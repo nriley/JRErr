@@ -19,6 +19,10 @@
     #endif
 #endif
 
+#if !__has_feature(objc_arc)
+    #define __autoreleasing
+#endif
+
 //-----------------------------------------------------------------------------------------
 // jrErr provides easy access to the top of the thread-local NSError stack.
 
