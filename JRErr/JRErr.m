@@ -81,7 +81,7 @@ void JRErrRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activ
 
 - (id)initWithError:(NSError*)error {
     self = [super initWithName:@"NSError"
-                        reason:[error description]
+                        reason:[error localizedDescription] // NJR
                       userInfo:@{@"error": error}];
     return self;
 }
